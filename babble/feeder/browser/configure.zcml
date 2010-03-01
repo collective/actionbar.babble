@@ -1,0 +1,34 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="babble.client">
+
+    <browser:resource
+        name="chat_bottomfeeder.js"
+        file="javascript/chat_bottomfeeder.js"
+        />
+
+    <browser:resource
+        name="babblefeeder.css"
+        file="stylesheets/babblefeeder.css"
+        />
+
+    <browser:page
+        for="*"
+        attribute="show_online_contacts_box"
+        class=".onlinecontacts.OnlineContacts"
+        name="show_online_contacts_box"
+        permission="zope2.View"
+        /> 
+
+    <browser:viewlet  
+        name="bottomfeeder.chat"
+        manager="bottom.feeder.browser.interfaces.IBottomFeeder"
+        class=".viewlets.ChatViewlet"
+        permission="zope2.View" 
+        layer="bottom.feeder.browser.interfaces.IBottomFeederLayer"
+        template="./templates/chat_viewlet.pt"
+        />
+
+</configure>

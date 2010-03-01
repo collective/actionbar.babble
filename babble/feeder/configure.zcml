@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="babble.feeder">
+
+    <include package=".browser" />
+
+    <genericsetup:registerProfile
+        name="default"
+        title="babble.feeder"
+        directory="profiles/default"
+        description="bottom.feeder integration for Babble Instant Messaging"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+</configure>

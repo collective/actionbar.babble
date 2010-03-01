@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts" meta_type="JavaScripts Registry">
+
+    <javascript 
+        authenticated="True"
+        id="++resource++chat_bottomfeeder.js"
+        insert-after="++resource++bottomfeeder.js"
+        />
+
+</object>
