@@ -1,10 +1,6 @@
 from zope.interface import Interface
+    
+class IBabbleFeederLayer(Interface):
+    """Marker Interface for a custom BrowserLayer
+    """
 
-class IOnlineContacts(Interface):
-    """ """
-
-    def get_online_contacts(self):
-        """ """
-
-    def show_online_contacts_box(self):
-        """ """
