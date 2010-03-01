@@ -1,0 +1,6 @@
+<layers>
+    <layer
+        name="babble.feeder"
+        interface="babble.feeder.browser.interfaces.IBabbleFeederLayer"
+     />
+</layers>
