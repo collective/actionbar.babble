@@ -14,21 +14,22 @@
         file="stylesheets/babblefeeder.css"
         />
 
-    <browser:page
-        for="*"
-        attribute="show_online_contacts_box"
-        class=".onlinecontacts.OnlineContacts"
-        name="show_online_contacts_box"
-        permission="zope2.View"
-        /> 
-
     <browser:viewlet  
         name="bottomfeeder.chat"
         manager="bottom.feeder.browser.interfaces.IBottomFeeder"
         class=".viewlets.ChatViewlet"
         permission="zope2.View" 
-        layer="bottom.feeder.browser.interfaces.IBottomFeederLayer"
+        layer=".interfaces.IBabbleFeederLayer"
         template="./templates/chat_viewlet.pt"
         />
+
+    <browser:page
+        for="*"
+        attribute="render_chat_box"
+        class=".chat.BabbleChatBox"
+        name="render_chat_box"
+        permission="zope2.View"
+        layer=".interfaces.IBabbleFeederLayer"
+        /> 
 
 </configure>
