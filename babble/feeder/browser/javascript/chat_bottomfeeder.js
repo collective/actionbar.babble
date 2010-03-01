@@ -1,3 +1,14 @@
+function updateOpenChatsCookie(username, title) {
+    var cookie = jQuery.cookie('chats-open-'+username);
+    if (cookie)
+        var open_chats = cookie.split('|');
+    else
+        var open_chats = Array();
+    open_chats.push(title);
+    var new_cookie = open_chats.join('|');
+    jQuery.cookie('chats-open-'+username, new_cookie, {path: '/'});
+}
+
 jQuery(document).ready(function() {
 
     jQuery("#chatpanel").adjustPanel(); 
@@ -18,29 +29,37 @@ jQuery(document).ready(function() {
 
     //Click event on Chat Panel
     jQuery("#chatpanel a:first").click(function() { 
-        var chatbox = jQuery('#chatbox_bottomfeeder_online_contacts');
+        title = 'bottomfeeder_online_contacts';
+        var chatbox = jQuery('#chatbox_'+title);
         if (chatbox.length) {
             if(chatbox.is(':visible')){ 
                 chatbox.hide(); 
+                reorderChats();
             }
             else {
-                positionNewChat(chatbox);
                 chatbox.show(); 
+                reorderChats();
             }
         }
         else { 
             jQuery.ajax({
-                url: "@@show_online_contacts_box",
+                url: "@@render_chat_box",
                 cache: false,
-                data: {},
+                data: {
+                    box_id: "chatbox_"+title,
+                    user: username,
+                    title: title,
+                    },
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
                     log.error(textStatus);
                     log.error(errorThrown);
                 },
                 success: function(data) {
                     jQuery('body').append(data);
-                    var chatbox = jQuery('#chatbox_bottomfeeder_online_contacts');
+                    updateOpenChatsCookie(username, title);
+                    var chatbox = jQuery('#chatbox_'+title);
                     positionNewChat(chatbox);
+                    chats.push(title);
                     chatbox.show();
                 }
             });
@@ -55,4 +74,5 @@ jQuery(document).ready(function() {
         jQuery(this).find("a.delete").css({'visibility': 'hidden'}); //Hide delete icon on hover out
     });
 });
+
 
