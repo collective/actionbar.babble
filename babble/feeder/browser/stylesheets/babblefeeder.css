@@ -4,78 +4,23 @@
 	color: #ffffff;
 	border-right:1px solid #8CACBB;
 	border-left:1px solid #8CACBB;
-	cursor: pointer;
     margin: 0;
 	font-size: 100%;
 }
 
 .oc-chat-content {
-	height:264px;
+	height:279px;
+    width: 100%;
+    padding: 0px;
 }
 
-
-/* XXX: Subpanel stuff to be removed... */
-
-/*--Reset left positioning and make it right positioned--*/
-#alertpanel .subpanel { right: 0; left: auto; }
-
-#alertpanel .subpanel li {
-	border-top: 1px solid #f0f0f0;
-	display: block;
+.oc-chat-content dl {
+    margin: 0px;
+    padding: 0px;
 }
 
-#alertpanel .subpanel li p {padding: 5px 10px;}
-#alertpanel .subpanel li a.delete{
-	background: url(delete_x.gif) no-repeat;
-	float: right;
-	width: 13px; height: 14px;
-	margin: 5px;
-	text-indent: -9999px;
-	visibility: hidden; 
-    /*--Hides by default but still takes up space (not completely gone like display:none;)--*/
-}
-
-#alertpanel .subpanel li a.delete:hover { background-position: left bottom; }
-#footpanel #alertpanel li.view {
-	text-align: right;
-	padding: 5px 10px 5px 0;
-}
-
-#footpanel .subpanel {
-	position: absolute;
-	right: 20px; 
-    bottom: 44px;
-	display: none;	/*--Hide by default--*/
-	height:308px;
-	width:224px;
-	border: 1px solid #ccc;
-	background: #fff;
-	overflow: hidden;
-}
-
-#chatpanel .subpanel {
-	position: fixed;
-	position:expression("absolute");
-	width: 225px;
-	display:none;
-    bottom: 44px; 
-}
-
-#footpanel .subpanel ul{
-	padding: 0; margin: 0;
-	background: #fff;
-	width: 100%;
-	overflow: auto;
-	padding-bottom: 2px;
-}
-
-#footpanel .subpanel li{
-	float: none; /*--Reset float--*/
-	display: block;
-	padding: 0; margin: 0;
-	overflow: hidden;
-	clear: both;
-	background: #fff;
-	position: static;  /*--Reset relative positioning--*/
-	font-size: 0.9em;
+.oc-chat-content dd {
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding: 1em;
 }
