@@ -10,9 +10,14 @@ class BabbleChatBox(ChatBox):
     def render_chat_box(self, box_id, user, title):
         """ """
         if title == 'bottomfeeder_online_contacts':
-            online_users = utils.get_online_contacts(self.context)
+            online_users = utils.get_online_members(self.context)
             template = ViewPageTemplateFile('templates/onlinecontacts.pt')
-            return template(self, online_users=online_users)
+            return template(
+                        self, 
+                        online_users=online_users, 
+                        title=title, 
+                        box_id=box_id
+                        )
         else:
             messages = utils.get_last_conversation(self.context, user, title)
             return  self.template(messages=messages, box_id=box_id, title=title)
