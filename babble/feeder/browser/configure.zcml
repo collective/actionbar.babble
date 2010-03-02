@@ -5,8 +5,8 @@
     i18n_domain="babble.client">
 
     <browser:resource
-        name="chat_bottomfeeder.js"
-        file="javascript/chat_bottomfeeder.js"
+        name="babblefeeder.js"
+        file="javascript/babblefeeder.js"
         />
 
     <browser:resource
