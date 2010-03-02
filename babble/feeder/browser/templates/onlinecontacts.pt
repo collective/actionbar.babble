@@ -1,0 +1,31 @@
+<div class="chatbox"
+     tal:attributes="id options/box_id"
+     tal:define="title options/title">
+
+    <div class="oc-chat-head"> 
+        <div class="chat-title">Online Users</div> 
+        <div class="chat-options"> 
+            <a href="javascript:void(0)" 
+               tal:attributes="onclick string:javascript:toggleChat('$title')">-</a> 
+            <a href="javascript:void(0)" 
+               tal:attributes="onclick string:javascript:closeChat('$title')">X</a> 
+        </div>  
+        <br clear="all"/> 
+    </div> 
+    <div class="chat-content oc-chat-content">
+        <dl >
+            <tal:loop repeat="contact options/online_users">  
+
+                <dd tal:define="oddrow repeat/contact/odd;
+                                fullname python:contact.getProperty('fullname') or contact.id"
+                    tal:attributes="class python:oddrow and  'even' or 'odd'">
+                    <a  tal:content="fullname" 
+                        style="cursor: pointer;"
+                        tal:attributes="onclick string:jQuery.noConflict();; startChat('${contact/id}')"> 
+                        Contact Name 
+                    </a>
+                </dd>
+            </tal:loop>
+        </dl>
+    </div> 
+</div>
