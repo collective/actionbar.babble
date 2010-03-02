@@ -1,10 +1,8 @@
 from zope.interface import implements
 from zope.viewlet.interfaces import IViewlet
-
 from Products.Five.browser import BrowserView
-
+from babble.client import utils
 from bottom.feeder.browser.viewlets import ViewletMixin
-
 
 class ChatViewlet(BrowserView, ViewletMixin):
     """ """
@@ -17,6 +15,11 @@ class ChatViewlet(BrowserView, ViewletMixin):
         self.request = request
         self.view = view
         self.manager = manager
+
+    def get_num_online_contacts(self):
+        """ Return one less to exclude the current user """
+        # XXX: Consider a simple cache
+        return len(utils.get_online_usernames(self.context))-1
 
     def update(self):
         pass
