@@ -3,7 +3,7 @@
 
     <javascript 
         authenticated="True"
-        id="++resource++chat_bottomfeeder.js"
+        id="++resource++babblefeeder.js"
         insert-after="++resource++bottomfeeder.js"
         />
 

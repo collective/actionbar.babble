@@ -45,6 +45,7 @@ jQuery(document).ready(function() {
             jQuery.ajax({
                 url: "@@render_chat_box",
                 cache: false,
+                async: false,
                 data: {
                     box_id: "chatbox_"+title,
                     user: username,
@@ -56,13 +57,13 @@ jQuery(document).ready(function() {
                 },
                 success: function(data) {
                     jQuery('body').append(data);
-                    updateOpenChatsCookie(username, title);
-                    var chatbox = jQuery('#chatbox_'+title);
-                    positionNewChat(chatbox);
-                    chats.push(title);
-                    chatbox.show();
                 }
             });
+            updateOpenChatsCookie(username, title);
+            var chatbox = jQuery('#chatbox_'+title);
+            positionNewChat(chatbox);
+            chats.push(title);
+            chatbox.show();
         }
         return false; //Prevent browser jump to link anchor
     });
