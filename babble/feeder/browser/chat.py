@@ -7,7 +7,7 @@ class BabbleChatBox(ChatBox):
         separate template and style for the 'online contacts' box.
     """
 
-    def render_chat_box(self, box_id, user, title):
+    def render_chat_box(self, box_id, username, title):
         """ """
         if title == 'bottomfeeder_online_contacts':
             online_users = utils.get_online_members(self.context)
@@ -19,6 +19,6 @@ class BabbleChatBox(ChatBox):
                         box_id=box_id
                         )
         else:
-            messages = utils.get_last_conversation(self.context, user, title)
+            messages = utils.get_last_conversation(self.context, username, title)
             return  self.template(messages=messages, box_id=box_id, title=title)
 

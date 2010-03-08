@@ -19,7 +19,7 @@ class ChatViewlet(BrowserView, ViewletMixin):
     def get_num_online_contacts(self):
         """ Return one less to exclude the current user """
         # XXX: Consider a simple cache
-        return len(utils.get_online_usernames(self.context))-1
+        return len(utils.get_online_usernames(self.context))
 
     def update(self):
         pass

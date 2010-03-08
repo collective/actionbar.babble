@@ -48,7 +48,7 @@ jQuery(document).ready(function() {
                 async: false,
                 data: {
                     box_id: "chatbox_"+title,
-                    user: username,
+                    username: username,
                     title: title,
                     },
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
