@@ -9,7 +9,7 @@
 }
 
 .oc-chat-content {
-	height:279px;
+	height:265px !important;
     width: 100%;
     padding: 0px;
 }
