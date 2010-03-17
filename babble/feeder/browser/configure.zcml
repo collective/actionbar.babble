@@ -15,7 +15,7 @@
         />
 
     <browser:viewlet  
-        name="bottomfeeder.chat"
+        name="actionbar.panel.chat"
         manager="actionbar.panel.browser.interfaces.IBottomFeeder"
         class=".viewlets.ChatViewlet"
         permission="zope2.View" 

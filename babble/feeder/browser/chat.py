@@ -9,7 +9,7 @@ class BabbleChatBox(ChatBox):
 
     def render_chat_box(self, box_id, username, title):
         """ """
-        if title == 'bottomfeeder_online_contacts':
+        if title == 'actionbar.panel_online_contacts':
             online_users = utils.get_online_members(self.context)
             template = ViewPageTemplateFile('templates/onlinecontacts.pt')
             return template(
