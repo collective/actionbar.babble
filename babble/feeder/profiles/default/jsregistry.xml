@@ -4,7 +4,7 @@
     <javascript 
         authenticated="True"
         id="++resource++babblefeeder.js"
-        insert-after="++resource++actionbar.panel.js"
+        insert-after="chat.js.dtml"
         />
 
 </object>
