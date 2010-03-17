@@ -5,7 +5,7 @@ version = '1.0'
 
 setup(name='babble.feeder',
       version=version,
-      description="A bottom.feeder integration package for the Babble instant messaging system.",
+      description="A actionbar.panel integration package for the Babble instant messaging system.",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
@@ -26,7 +26,7 @@ setup(name='babble.feeder',
       install_requires=[
           'setuptools',
           'babble.client',
-          'bottom.feeder',
+          'actionbar.panel',
       ],
       entry_points="""
       [z3c.autoinclude.plugin]

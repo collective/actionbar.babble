@@ -11,7 +11,7 @@
         name="default"
         title="babble.feeder"
         directory="profiles/default"
-        description="bottom.feeder integration for Babble Instant Messaging"
+        description="actionbar.panel integration for Babble Instant Messaging"
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 

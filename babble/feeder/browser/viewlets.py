@@ -2,7 +2,7 @@ from zope.interface import implements
 from zope.viewlet.interfaces import IViewlet
 from Products.Five.browser import BrowserView
 from babble.client import utils
-from bottom.feeder.browser.viewlets import ViewletMixin
+from actionbar.panel.browser.viewlets import ViewletMixin
 
 class ChatViewlet(BrowserView, ViewletMixin):
     """ """
