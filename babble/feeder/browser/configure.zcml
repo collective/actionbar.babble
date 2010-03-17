@@ -16,7 +16,7 @@
 
     <browser:viewlet  
         name="actionbar.panel.chat"
-        manager="actionbar.panel.browser.interfaces.IBottomFeeder"
+        manager="actionbar.panel.browser.interfaces.IActionbarPanel"
         class=".viewlets.ChatViewlet"
         permission="zope2.View" 
         layer=".interfaces.IBabbleFeederLayer"
