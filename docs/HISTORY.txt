@@ -4,4 +4,9 @@ Changelog
 0.1a2 (2010-04-08)
 ------------------
 
-- Initial release
+- Tweaked jsregistry.xml to gain Plone3 compatibility [jcbrand]
+
+0.1a1 (2010-04-08)
+------------------
+
+- Initial release [jcbrand]
