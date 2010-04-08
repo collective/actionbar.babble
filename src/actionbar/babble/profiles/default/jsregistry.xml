@@ -2,7 +2,7 @@
 <object name="portal_javascripts" meta_type="JavaScripts Registry">
 
     <javascript 
-        authenticated="True"
+        expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous()"
         id="++resource++babblefeeder.js"
         insert-after="chat.js"
         />
