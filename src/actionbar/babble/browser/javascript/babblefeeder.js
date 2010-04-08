@@ -12,7 +12,7 @@ function updateOpenChatsCookie(username, title) {
 jQuery(document).ready(function() {
 
     jQuery("#chatpanel a:first").click(function() { 
-        title = 'bottomfeeder_online_contacts';
+        title = 'actionbar_babble_online_contacts';
         var chatbox = jQuery('#chatbox_'+title);
         if (chatbox.length) {
             if(chatbox.is(':visible')){ 
@@ -31,8 +31,7 @@ jQuery(document).ready(function() {
                 async: false,
                 data: {
                     box_id: "chatbox_"+title,
-                    username: username,
-                    title: title,
+                    contact: title,
                     },
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
                     log.error(textStatus);

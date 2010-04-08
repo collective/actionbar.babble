@@ -7,18 +7,13 @@ class BabbleChatBox(ChatBox):
         separate template and style for the 'online contacts' box.
     """
 
-    def render_chat_box(self, box_id, username, title):
+    def render_chat_box(self, box_id, contact):
         """ """
-        if title == 'actionbar.panel_online_contacts':
+        if contact == 'actionbar_babble_online_contacts':
             online_users = utils.get_online_members(self.context)
             template = ViewPageTemplateFile('templates/onlinecontacts.pt')
-            return template(
-                        self, 
-                        online_users=online_users, 
-                        title=title, 
-                        box_id=box_id
-                        )
+            return template(self, online_users=online_users, title=contact, box_id=box_id)
         else:
-            messages = utils.get_last_conversation(self.context, username, title)
-            return  self.template(messages=messages, box_id=box_id, title=title)
+            messages = utils.get_last_conversation(self.context, contact)
+            return  self.template(messages=messages, box_id=box_id, title=contact)
 

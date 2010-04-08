@@ -2,6 +2,7 @@
     <description>Babble ActionBar integration</description>
     <version>0.1</version>
     <dependencies>
+        <dependency>profile-babble.client:default</dependency>
         <dependency>profile-actionbar.panel:default</dependency>
     </dependencies>
 </metadata>
