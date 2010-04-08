@@ -24,3 +24,8 @@ the bottom of your Plone site. At the bottom right, you will see a section
 called *Online Users*. Clicking on it will popup a dialog showing all the
 current online users you can chat with.
 
+Compatibility:
+--------------
+
+Tested on Plone 3.3 and Plone 4
+
