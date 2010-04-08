@@ -27,7 +27,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        'actionbar.client',
+        'babble.client',
         'actionbar.panel',
     ],
     entry_points="""
