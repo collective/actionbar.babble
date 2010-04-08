@@ -6,7 +6,7 @@ from Acquisition import aq_inner
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 
-log = logging.getLogger('babble.feeder/browser/chat.py')
+log = logging.getLogger('actionbar.babble/browser/chat.py')
 
 class BabbleException(Exception):
 

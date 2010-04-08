@@ -1,6 +1,6 @@
 <layers>
     <layer
-        name="babble.feeder"
-        interface="babble.feeder.browser.interfaces.IBabbleFeederLayer"
+        name="actionbar.babble"
+        interface="actionbar.babble.browser.interfaces.IActionbarBabbleLayer"
      />
 </layers>

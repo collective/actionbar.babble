@@ -19,7 +19,7 @@
         manager="actionbar.panel.browser.interfaces.IActionbarPanel"
         class=".viewlets.ChatViewlet"
         permission="zope2.View" 
-        layer=".interfaces.IBabbleFeederLayer"
+        layer=".interfaces.IActionbarBabbleLayer"
         template="./templates/chat_viewlet.pt"
         />
 
@@ -29,7 +29,7 @@
         class=".chat.BabbleChatBox"
         name="render_chat_box"
         permission="zope2.View"
-        layer=".interfaces.IBabbleFeederLayer"
+        layer=".interfaces.IActionbarBabbleLayer"
         /> 
 
 </configure>

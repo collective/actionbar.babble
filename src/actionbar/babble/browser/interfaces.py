@@ -1,6 +1,6 @@
 from zope.interface import Interface
     
-class IBabbleFeederLayer(Interface):
+class IActionbarBabbleLayer(Interface):
     """Marker Interface for a custom BrowserLayer
     """
 
