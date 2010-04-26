@@ -29,7 +29,10 @@ jQuery(document).ready(function() {
             if (path.indexOf("portal_factory") != -1) {
                 path = path.split('/portal_factory')[0];
             }
-            path += '/@@render_chat_box';
+            if (path == '/') 
+                path = ''
+
+            path = '/@@render_chat_box';
             jQuery.ajax({
                 url: path,
                 cache: false,
