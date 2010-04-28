@@ -25,14 +25,7 @@ jQuery(document).ready(function() {
             }
         }
         else { 
-            var path = window.location.pathname;
-            if (path.indexOf("portal_factory") != -1) {
-                path = path.split('/portal_factory')[0];
-            }
-            if (path == '/') 
-                path = ''
-
-            path = '/@@render_chat_box';
+            path = sanitizePath('/@@render_chat_box');
             jQuery.ajax({
                 url: path,
                 cache: false,
