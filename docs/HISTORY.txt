@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.1b1 (2011-01-18)
+------------------
+
+- Added support for babble.client 1.4 [jcbrand]
+
+
 0.1a3 (2010-04-28)
 ------------------
 
