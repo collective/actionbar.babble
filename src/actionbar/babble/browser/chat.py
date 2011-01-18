@@ -14,6 +14,6 @@ class BabbleChatBox(ChatBox):
             template = ViewPageTemplateFile('templates/onlinecontacts.pt')
             return template(self, online_users=online_users, title=contact, box_id=box_id)
         else:
-            messages = utils.get_last_conversation(self.context, contact)
-            return  self.template(messages=messages, box_id=box_id, title=contact)
+            response = utils.get_last_conversation(self.context, contact)
+            return self.template(messages=response['messages'], box_id=box_id, title=contact)
 
