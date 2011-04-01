@@ -11,20 +11,20 @@ function updateOpenChatsCookie(username, title) {
 
 jQuery(document).ready(function() {
 
-    jQuery("#chatpanel a:first").click(function() { 
+    jQuery("#chatpanel a:first").click(function() {
         title = 'actionbar_babble_online_contacts';
         var chatbox = jQuery('#chatbox_'+title);
         if (chatbox.length) {
-            if(chatbox.is(':visible')){ 
-                chatbox.hide(); 
+            if(chatbox.is(':visible')){
+                chatbox.hide();
                 reorderChats();
             }
             else {
-                chatbox.show(); 
+                chatbox.show();
                 reorderChats();
             }
         }
-        else { 
+        else {
             path = sanitizePath('/@@render_chat_box');
             jQuery.ajax({
                 url: path,
@@ -32,7 +32,7 @@ jQuery(document).ready(function() {
                 async: false,
                 data: {
                     box_id: "chatbox_"+title,
-                    contact: title,
+                    contact: title
                     },
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
                     log.error(textStatus);
