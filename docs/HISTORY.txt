@@ -1,10 +1,10 @@
 Changelog
 =========
 
-0.1b2 (unreleased)
+0.1b2 (2011-04-04)
 ------------------
 
-- Fixed an IE javascript bug [deroiste]
+- Fixed an IE javascript bug #2038 [deroiste]
 
 
 0.1b1 (2011-01-18)
