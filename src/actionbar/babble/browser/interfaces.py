@@ -1,6 +1,6 @@
-from zope.interface import Interface
+from babble.client.interfaces import IBabbleClientLayer
     
-class IActionbarBabbleLayer(Interface):
+class IActionbarBabbleLayer(IBabbleClientLayer):
     """Marker Interface for a custom BrowserLayer
     """
 

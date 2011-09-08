@@ -7,11 +7,13 @@
     <browser:resource
         name="babblefeeder.js"
         file="javascript/babblefeeder.js"
+        layer=".interfaces.IActionbarBabbleLayer"
         />
 
     <browser:resource
         name="babblefeeder.css"
         file="stylesheets/babblefeeder.css"
+        layer=".interfaces.IActionbarBabbleLayer"
         />
 
     <browser:viewlet  
@@ -19,8 +21,8 @@
         manager="actionbar.panel.browser.interfaces.IActionbarPanel"
         class=".viewlets.ChatViewlet"
         permission="zope2.View" 
-        layer=".interfaces.IActionbarBabbleLayer"
         template="./templates/chat_viewlet.pt"
+        layer=".interfaces.IActionbarBabbleLayer"
         />
 
     <browser:page

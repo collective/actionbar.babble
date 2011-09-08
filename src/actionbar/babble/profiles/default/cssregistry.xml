@@ -9,6 +9,6 @@
         compression="safe" 
         cookable="True"
         enabled="1" 
-        insert-after="++resource++chat.css"
+        insert-after="++resource++babble.client.stylesheets/chat.css"
         expression=""/>
 </object>
