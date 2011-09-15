@@ -1,9 +1,8 @@
 function updateOpenChatsCookie(username, title) {
     var cookie = jQuery.cookie('chats-open-'+username);
+    var open_chats = Array();
     if (cookie)
         var open_chats = cookie.split('|');
-    else
-        var open_chats = Array();
     open_chats.push(title);
     var new_cookie = open_chats.join('|');
     jQuery.cookie('chats-open-'+username, new_cookie, {path: '/'});
@@ -43,7 +42,7 @@ jQuery(document).ready(function() {
                 }
             });
             updateOpenChatsCookie(username, title);
-            var chatbox = jQuery('#chatbox_'+title);
+            chatbox = jQuery('#chatbox_'+title);
             positionNewChat(chatbox);
             chats.push(title);
             chatbox.show();
