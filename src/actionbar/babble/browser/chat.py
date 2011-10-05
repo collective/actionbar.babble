@@ -14,5 +14,9 @@ class BabbleChatBox(ChatBox):
             return template(self, online_users=online_users, title=contact, box_id=box_id)
         else:
             response = utils.get_last_conversation(self.context, contact)
-            return self.template(messages=response['messages'], box_id=box_id, title=contact)
+            return self.template(
+                            messages=response['messages'], 
+                            timestamp=response['timestamp'],
+                            box_id=box_id, 
+                            title=contact)
 
