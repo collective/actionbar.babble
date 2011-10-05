@@ -1,10 +1,10 @@
 Changelog
 =========
 
-0.1b3 (unreleased)
-------------------
+0.2 (2011-10-05)
+----------------
 
-- Nothing changed yet.
+- Add timestamp support. [jcbrand]
 
 
 0.1b2 (2011-04-04)
