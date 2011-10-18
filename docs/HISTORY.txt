@@ -4,7 +4,7 @@ Changelog
 0.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Compatibility fixes. [jcbrand]
 
 
 0.2 (2011-10-05)
