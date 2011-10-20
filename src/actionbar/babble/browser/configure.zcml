@@ -3,7 +3,13 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="babble.client">
-
+        
+    <browser:resourceDirectory
+        name="actionbar.babble.images"
+        directory="images"
+        layer="babble.client.interfaces.IBabbleClientLayer"
+        />
+        
     <browser:resource
         name="babblefeeder.js"
         file="javascript/babblefeeder.js"
@@ -22,6 +28,15 @@
         class=".viewlets.ChatViewlet"
         permission="zope2.View" 
         template="./templates/chat_viewlet.pt"
+        layer=".interfaces.IActionbarBabbleLayer"
+        />
+
+    <browser:viewlet  
+        name="actionbar.panel.chatrooms"
+        manager="actionbar.panel.browser.interfaces.IActionbarPanel"
+        class=".viewlets.ChatRoomsViewlet"
+        permission="zope2.View" 
+        template="./templates/chatrooms_viewlet.pt"
         layer=".interfaces.IActionbarBabbleLayer"
         />
 

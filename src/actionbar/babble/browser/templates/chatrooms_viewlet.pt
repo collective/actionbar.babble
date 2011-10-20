@@ -1,0 +1,6 @@
+<li id="chatpanel"
+    tal:define="online_users view/chatrooms">
+    <a href="#" class="chat chatrooms">
+        Chat Rooms (<strong id="bottomfeeder_online_users" tal:content="online_users">0</strong>)
+    </a>
+</li>

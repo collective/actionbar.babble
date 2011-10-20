@@ -12,6 +12,12 @@ class BabbleChatBox(ChatBox):
             online_users = utils.get_online_members(self.context)
             template = ViewPageTemplateFile('templates/onlinecontacts.pt')
             return template(self, online_users=online_users, title=contact, box_id=box_id)
+
+        elif contact == 'actionbar_babble_chatrooms':
+            online_users = utils.get_online_members(self.context)
+            template = ViewPageTemplateFile('templates/chatrooms.pt')
+            return template(self, online_users=online_users, title=contact, box_id=box_id)
+
         else:
             response = utils.get_last_conversation(self.context, contact)
             return self.template(
