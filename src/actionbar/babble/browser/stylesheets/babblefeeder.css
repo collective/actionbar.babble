@@ -25,6 +25,16 @@
     padding: 1em;
 }
 
+.cr-chat-head {
+	background: #2D617A;
+	padding:7px;
+	color: #ffffff;
+	border-right:1px solid #8CACBB;
+	border-left:1px solid #8CACBB;
+    margin: 0;
+	font-size: 100%;
+}
+
 .chatbox {
     bottom: 44px; /* To allow space for the bottom bar */
 }
@@ -41,7 +51,7 @@
 }
 
 #footpanel a.chatrooms {
-	background: url(++resource++actionbar.babble.images/comment_32.png) no-repeat 3px center;
+	background: url(++resource++babble.client.images/comment_32.png) no-repeat 3px center;
 }
 
 /*--Right align the chat and alert panels--*/

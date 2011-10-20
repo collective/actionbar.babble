@@ -1,6 +1,6 @@
 <li id="chatpanel"
     tal:define="online_users view/get_num_online_contacts">
-    <a href="#" class="chat">
+    <a href="#" class="chat" id="chatpanel_online_users">
         Online Users (<strong id="bottomfeeder_online_users" tal:content="online_users">0</strong>)
     </a>
 </li>

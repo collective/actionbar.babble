@@ -1,29 +1,29 @@
 <div class="chatbox"
      tal:attributes="id options/box_id"
-     tal:define="title options/title">
+     tal:define="name options/name">
 
-    <div class="oc-chat-head"> 
+    <div class="cr-chat-head"> 
         <div class="chat-title">Chat Rooms</div> 
         <div class="chat-options"> 
             <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:toggleChat('$title')">-</a> 
+               tal:attributes="onclick string:javascript:toggleChat('$name', 'chatroom')">-</a> 
             <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:closeChat('$title')">X</a> 
+               tal:attributes="onclick string:javascript:closeChat('$name', 'chatroom')">X</a> 
         </div>  
         <br clear="all"/> 
     </div> 
     <div class="chat-content oc-chat-content">
         <dl >
-            <tal:loop repeat="contact options/online_users">  
+            <tal:loop repeat="chatroom options/chatrooms">  
 
-                <dd tal:define="oddrow repeat/contact/odd;
-                                fullname python:contact.getProperty('fullname') or contact.id"
+                <dd tal:define="oddrow repeat/chatroom/odd;
+                                fullname chatroom/Title"
                     tal:attributes="class python:oddrow and  'even' or 'odd'">
-                    <a  tal:content="fullname" 
-                        style="cursor: pointer;"
-                        tal:attributes="onclick string:jQuery.noConflict();; startChat('${contact/id}')"> 
-                        Contact Name 
-                    </a>
+                <a  tal:content="fullname" 
+                    style="cursor: pointer;"
+                    tal:attributes="onclick string:jQuery.noConflict();; startChat('${chatroom/id}', '${chatroom/Title}', 'chatroom')"> 
+                    chatroom Name 
+                </a>
                 </dd>
             </tal:loop>
         </dl>
