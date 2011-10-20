@@ -28,3 +28,51 @@
 .chatbox {
     bottom: 44px; /* To allow space for the bottom bar */
 }
+
+/* Styling for the chat panel bottom feeder */
+#footpanel a.chat {
+	background: url(++resource++actionbar.babble.images/comment_user_32.png) no-repeat 3px center;
+	width: 126px;
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #bbb;
+	padding-left: 40px;
+	text-indent: 0; 
+    /*--Reset text indent since there will be a combination of both text and image--*/
+}
+
+#footpanel a.chatrooms {
+	background: url(++resource++actionbar.babble.images/comment_32.png) no-repeat 3px center;
+}
+
+/*--Right align the chat and alert panels--*/
+#footpanel li#chatpanel, #footpanel li#alertpanel {	float: right; }  
+
+#chatpanel .subpanel li { 
+    background: url(++resource++actionbar.babble.images/dash.gif) repeat-x left center; 
+}
+
+#chatpanel .subpanel li span {
+	padding: 5px;
+	background: #fff;
+	color: #777;
+	float: left;
+}
+
+#chatpanel .subpanel li a img {
+	float: left;
+	margin: 0 5px;
+}
+
+#chatpanel .subpanel li a{
+	padding: 3px 0;	margin: 0;
+	line-height: 32px;
+	height: 32px; 
+	background: #fff;
+	display: block;
+}
+
+#chatpanel .subpanel li a:hover {
+	background: #DEE7EC;
+	text-decoration: none;
+}
+
