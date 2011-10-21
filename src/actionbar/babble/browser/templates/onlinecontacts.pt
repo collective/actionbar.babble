@@ -6,9 +6,9 @@
         <div class="chat-title">Online Users</div> 
         <div class="chat-options"> 
             <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:toggleChat('$name')">-</a> 
+               tal:attributes="onclick string:javascript:toggleChat('${options/box_id}')">-</a> 
             <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:closeChat('$name', 'chatbox')">X</a> 
+               tal:attributes="onclick string:javascript:closeChat('${options/box_id}', '$name')">X</a> 
         </div>  
         <br clear="all"/> 
     </div> 
@@ -21,7 +21,7 @@
                     tal:attributes="class python:oddrow and  'even' or 'odd'">
                     <a  tal:content="fullname" 
                         style="cursor: pointer;"
-                        tal:attributes="onclick string:jQuery.noConflict();; startChat('${contact/id}', '${fullname}', 'chatbox')"> 
+                        tal:attributes="onclick string:jQuery.noConflict();; startChat('chatbox_${contact/id}')"> 
                         Contact Name 
                     </a>
                 </dd>

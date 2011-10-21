@@ -6,9 +6,9 @@
         <div class="chat-title">Chat Rooms</div> 
         <div class="chat-options"> 
             <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:toggleChat('$name', 'chatroom')">-</a> 
+               tal:attributes="onclick string:javascript:toggleChat('${options/box_id}')">-</a> 
             <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:closeChat('$name', 'chatroom')">X</a> 
+               tal:attributes="onclick string:javascript:closeChat('${options/box_id}', '$name')">X</a> 
         </div>  
         <br clear="all"/> 
     </div> 
@@ -16,12 +16,11 @@
         <dl >
             <tal:loop repeat="chatroom options/chatrooms">  
 
-                <dd tal:define="oddrow repeat/chatroom/odd;
-                                fullname chatroom/Title"
+                <dd tal:define="oddrow repeat/chatroom/odd;"
                     tal:attributes="class python:oddrow and  'even' or 'odd'">
-                <a  tal:content="fullname" 
+                <a  tal:content="chatroom/Title" 
                     style="cursor: pointer;"
-                    tal:attributes="onclick string:jQuery.noConflict();; startChat('${chatroom/id}', '${chatroom/Title}', 'chatroom')"> 
+                    tal:attributes="onclick string:jQuery.noConflict();; startChat('chatbox_${chatroom/id}')"> 
                     chatroom Name 
                 </a>
                 </dd>

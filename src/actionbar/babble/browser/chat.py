@@ -6,8 +6,9 @@ class BabbleChatBox(ChatBox):
     """ Override the browser view from babble.client to enable us to have a
         separate template and style for the 'online contacts' box.
     """
-    def render_chat_box(self, box_id, contact, title):
+    def render_chat_box(self, box_id):
         """ """
+        contact = box_id.split('_', 1)[1]
         if contact == 'actionbar_babble_online_contacts':
             online_users = utils.get_online_members(self.context)
             template = ViewPageTemplateFile('templates/onlinecontacts.pt')
@@ -24,6 +25,5 @@ class BabbleChatBox(ChatBox):
                             messages=response['messages'], 
                             last_msg_date=response['last_msg_date'],
                             box_id=box_id, 
-                            name=contact,
-                            title=title )
+                            name=contact,)
 
