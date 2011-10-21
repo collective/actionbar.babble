@@ -1,6 +1,6 @@
 <div class="chatbox"
      tal:attributes="id options/box_id"
-     tal:define="name options/name">
+     tal:define="contact_id options/name">
 
     <div class="oc-chat-head"> 
         <div class="chat-title">Online Users</div> 
@@ -8,7 +8,7 @@
             <a href="javascript:void(0)" 
                tal:attributes="onclick string:javascript:toggleChat('${options/box_id}')">-</a> 
             <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:closeChat('${options/box_id}', '$name')">X</a> 
+               tal:attributes="onclick string:javascript:closeChat('${options/box_id}', '$contact_id')">X</a> 
         </div>  
         <br clear="all"/> 
     </div> 

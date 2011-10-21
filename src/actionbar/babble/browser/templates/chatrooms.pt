@@ -20,7 +20,7 @@
                     tal:attributes="class python:oddrow and  'even' or 'odd'">
                 <a  tal:content="chatroom/Title" 
                     style="cursor: pointer;"
-                    tal:attributes="onclick string:jQuery.noConflict();; startChat('chatbox_${chatroom/id}')"> 
+                    tal:attributes="onclick string:jQuery.noConflict();; startChat('chatroom_${chatroom/getPath}')"> 
                     chatroom Name 
                 </a>
                 </dd>
