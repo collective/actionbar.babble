@@ -1,21 +1,22 @@
-function render_chatbox(name, prefix) {
+function render_chatbox(chat_id) {
+    // chat_id: A string that is unique to this chatbox.
     var cookie = jQuery.cookie('chats-open-'+username);
     var open_chats = [];
     if (cookie) {
         open_chats = cookie.split('|');
     }
-    var chatbox_id = prefix+'_'+name;
-    var chatbox = jQuery('#'+chatbox_id);
+    var hashed_id = hash(chat_id);
+    var chatbox = jQuery('#'+hashed_id);
     if (chatbox.length) {
         if(chatbox.is(':visible')){
             chatbox.hide();
-            open_chats.pop(chatbox_id);
+            open_chats.pop(chat_id);
             jQuery.cookie('chats-open-'+username, open_chats.join('|'), {path: '/'});
             reorderChats();
         }
         else {
             chatbox.show();
-            open_chats.push(chatbox_id);
+            open_chats.push(chat_id);
             jQuery.cookie('chats-open-'+username, open_chats.join('|'), {path: '/'});
             reorderChats();
         }
@@ -27,9 +28,8 @@ function render_chatbox(name, prefix) {
             cache: false,
             async: false,
             data: {
-                box_id: chatbox_id,
-                contact: name,
-                title: ''
+                chat_id: chat_id,
+                box_id: hashed_id
                 },
             error: function (XMLHttpRequest, textStatus, errorThrown) {
                 log.error(textStatus);
@@ -39,23 +39,22 @@ function render_chatbox(name, prefix) {
                 jQuery('body').append(data);
             }
         });
-        open_chats.push(chatbox_id);
+        open_chats.push(chat_id);
         jQuery.cookie('chats-open-'+username, open_chats.join('|'), {path: '/'});
-        chatbox = jQuery('#'+chatbox_id);
+        chatbox = jQuery('#'+hashed_id);
         positionNewChat(chatbox);
-        chats.push(chatbox_id);
+        chats.push(chat_id);
         chatbox.show();
     }
 }
 
-
 jQuery(document).ready(function() {
     jQuery("#chatpanel_online_users").click(function() {
-        render_chatbox('actionbar_babble_online_contacts', 'chatbox');
+        render_chatbox('actionbar_babble_online_contacts');
         return false; //Prevent browser jump to link anchor
     });
     jQuery("#chatpanel_chatrooms").click(function() {
-        render_chatbox('actionbar_babble_chat_rooms', 'chatroom');
+        render_chatbox('actionbar_babble_chat_rooms');
         return false; //Prevent browser jump to link anchor
     });
 });
