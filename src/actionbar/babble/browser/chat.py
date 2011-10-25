@@ -1,3 +1,4 @@
+from zExceptions import NotFound
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from babble.client import utils
 from babble.client.browser.chat import ChatBox
@@ -27,7 +28,7 @@ class BabbleChatBox(ChatBox):
                                             chat_type)
 
             if response['status'] != config.SUCCESS:
-                return 
+                raise NotFound
             if chat_type == 'chatroom':
                 messages = response['chatroom_messages']
             else:
