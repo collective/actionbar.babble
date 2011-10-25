@@ -3,7 +3,7 @@
      tal:define="chat_id options/chat_id;
                  ">
 
-    <div class="cr-chat-head"> 
+    <div class="chat-head cr-chat-head"> 
         <div class="chat-title">Chat Rooms</div> 
         <div class="chat-options"> 
             <a href="javascript:void(0)" 
@@ -13,7 +13,7 @@
         </div>  
         <br clear="all"/> 
     </div> 
-    <div class="chat-content oc-chat-content">
+    <div class="chat-content cr-chat-content">
         <dl >
             <tal:loop repeat="chatroom options/chatrooms">  
 

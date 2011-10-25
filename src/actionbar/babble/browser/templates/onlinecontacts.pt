@@ -2,7 +2,7 @@
      tal:attributes="id options/box_id"
      tal:define="chat_id options/chat_id;">
 
-    <div class="oc-chat-head"> 
+    <div class="chat-head oc-chat-head"> 
         <div class="chat-title">Online Users</div> 
         <div class="chat-options"> 
             <a href="javascript:void(0)" 

@@ -1,36 +1,45 @@
 .oc-chat-head {
 	background: #385503;
-	padding:7px;
-	color: #ffffff;
-    margin: 0;
-	font-size: 100%;
+    width: 213px;
 }
 
-.oc-chat-content {
+.cr-chat-head {
+	background: #0F3A4F;
+    width: 213px;
+}
+
+.oc-chat-content, .cr-chat-content {
 	height:279px !important;
     width: 100%;
     padding: 0px;
 }
 
-.oc-chat-content dl {
+.oc-chat-content dl, .cr-chat-content dl {
     margin: 0px;
     padding: 0px;
 }
 
-.oc-chat-content dd {
+.oc-chat-content dd, .cr-chat-content dd {
     margin-left: 0px;
     margin-bottom: 0px;
     padding: 1em;
 }
 
-.cr-chat-head {
-	background: #0F3A4F;
-	padding:7px;
-	color: #ffffff;
-    margin: 0;
-	font-size: 100%;
+.oc-chat-content dd.odd {
+    background-color: #DCEAC5;
 }
 
+.oc-chat-content {
+    background-color: #ECF4DF;
+}
+
+.cr-chat-content dd.odd {
+    background-color: #E2EEF4; 
+}
+
+.cr-chat-content {
+    background-color: #EFF6FA;
+}
 .chatbox {
     bottom: 44px; /* To allow space for the bottom bar */
 }
