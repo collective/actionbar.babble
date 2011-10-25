@@ -29,7 +29,8 @@ function render_chatbox(chat_id) {
             async: false,
             data: {
                 chat_id: chat_id,
-                box_id: hashed_id
+                box_id: hashed_id,
+                tzoffset: new Date().getTimezoneOffset()/60
                 },
             error: function (XMLHttpRequest, textStatus, errorThrown) {
                 log.error(textStatus);
