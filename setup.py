@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.3b2dev'
+version = '0.3b2'
 
 setup(
     name='actionbar.babble',
@@ -27,7 +27,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        'babble.client>=2.0a3',
+        'babble.client==2.0a4',
         'actionbar.panel',
     ],
     entry_points="""

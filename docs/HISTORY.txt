@@ -1,10 +1,10 @@
 Changelog
 =========
 
-0.3b2 (unreleased)
+0.3b2 (2011-11-20)
 ------------------
 
-- Nothing changed yet.
+- Compatibility fixes with babble.client 2.0a4 [jcbrand]
 
 
 0.3b1 (2011-10-18)
