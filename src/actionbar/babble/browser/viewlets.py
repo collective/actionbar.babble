@@ -22,7 +22,7 @@ class ChatRoomsViewlet(ActionViewlet):
         catalog = getToolByName(self.context, 'portal_catalog')
         self.chatrooms = len(catalog(
                             portal_type='babble.client.chatroom',
-                            allowedRolesAndUsers=member.getId()))
+                            participants=member.getId()))
         
         if self.chatrooms:
             return self.index()
