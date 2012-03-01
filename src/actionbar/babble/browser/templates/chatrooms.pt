@@ -9,7 +9,7 @@
             <a href="javascript:void(0)" 
                tal:attributes="onclick string:javascript:toggleChat('$chat_id')">-</a> 
             <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:closeChat('$chat_id',null)">X</a> 
+               tal:attributes="onclick string:javascript:closeChat('$chat_id')">X</a> 
         </div>  
         <br clear="all"/> 
     </div> 
