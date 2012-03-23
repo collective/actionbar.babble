@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.3b3'
+version = '0.3b4.dev0'
 
 setup(
     name='actionbar.babble',
