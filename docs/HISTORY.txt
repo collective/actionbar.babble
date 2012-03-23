@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.3b3 (unreleased)
+0.3b3 (2012-03-23)
 ------------------
 
 - Compatibility fixes for babble.client 2.0b1 [jcbrand]
